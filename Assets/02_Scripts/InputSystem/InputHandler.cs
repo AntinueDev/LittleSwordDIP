@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Logger = LittleSword.Common.Logger;
 
 namespace LittleSword.InputSystem
 {
@@ -26,16 +27,24 @@ namespace LittleSword.InputSystem
             inputActions.Enable();
             moveAction.performed += HandleMove;
             moveAction.canceled += HandleMove;
+            attackAction.performed += HandleAttack;
         }
         private void OnDisable()
         {
             inputActions.Disable();
             moveAction.performed -= HandleMove;
             moveAction.canceled -= HandleMove;            
+            attackAction.performed -= HandleAttack;
         }
+
+        private void HandleAttack(InputAction.CallbackContext ctx)
+        {
+            OnAttack?.Invoke();
+        }
+
         private void HandleMove(InputAction.CallbackContext ctx)
         {
-            Debug.Log($"Move : {ctx.ReadValue<Vector2>()}");
+            OnMove?.Invoke(ctx.ReadValue<Vector2>());
         }
     }
 }
