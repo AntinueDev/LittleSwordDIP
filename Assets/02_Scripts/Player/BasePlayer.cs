@@ -19,9 +19,10 @@ namespace LittleSword.Player
         private Rigidbody2D rb;
         private SpriteRenderer spriteRenderer;
         private Animator animator;
+        private new Collider2D collider;
         
         // 플레이어 스텟
-        [SerializeField] private PlayerStats playerStats;
+        public PlayerStats playerStats;
 
         // 프로퍼티
         public bool IsDead => CurrentHP <= 0;
@@ -82,6 +83,8 @@ namespace LittleSword.Player
 
             // 플레이어 HP 초기화
             CurrentHP = playerStats.maxHP;
+
+            collider = GetComponent<Collider2D>();
         }        
         #endregion
 
@@ -102,6 +105,10 @@ namespace LittleSword.Player
         {
             Logger.Log("사망");
             animationController.Die();
+
+            inputHandler.enabled = false;
+            collider.enabled = false;
+            rb.linearVelocity = Vector2.zero;
         }
     }
 }
