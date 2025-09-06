@@ -1,21 +1,33 @@
 using System;
 using UnityEngine;
 using LittleSword.InputSystem;
+using LittleSword.Interface;
 using LittleSword.Player.Controllers;
 using Logger = LittleSword.Common.Logger;
 
 namespace LittleSword.Player
 {
-    public class BasePlayer : MonoBehaviour
+    [RequireComponent(typeof(Rigidbody2D),typeof(InputHandler),typeof(CapsuleCollider2D))]
+    public class BasePlayer : MonoBehaviour, IDamageable
     {
         // Controller 설정
         private InputHandler inputHandler;
         private MovementController movementController;
+        private AnimationController animationController;
         
         // Components 캐싱 변수
         private Rigidbody2D rb;
         private SpriteRenderer spriteRenderer;
+        private Animator animator;
+        
+        // 플레이어 스텟
+        [SerializeField] private PlayerStats playerStats;
 
+        // 프로퍼티
+        public bool IsDead => CurrentHP <= 0;
+        public int CurrentHP { get; set; }
+
+        
         #region 유니티 이벤트
         protected void Awake()
         {
@@ -39,12 +51,14 @@ namespace LittleSword.Player
         #region 공통 메소드
         private void Move(Vector2 direction)
         {
-            movementController.Move(direction, 5.0f);
+            movementController.Move(direction, playerStats.moveSpeed);
+            animationController.Move(direction != Vector2.zero);
             Logger.Log("이동 처리");
         }
         
         private void Attack()
         {
+            animationController.Attack();
             Logger.Log("공격 로직");
         }
         #endregion
@@ -54,6 +68,7 @@ namespace LittleSword.Player
         {
             inputHandler = GetComponent<InputHandler>();
             movementController = new MovementController(rb, spriteRenderer);
+            animationController = new AnimationController(animator);
         }
         
         private void InitComponents()
@@ -63,7 +78,30 @@ namespace LittleSword.Player
             rb.freezeRotation = false;
 
             spriteRenderer = GetComponent<SpriteRenderer>();
+            animator = GetComponent<Animator>();
+
+            // 플레이어 HP 초기화
+            CurrentHP = playerStats.maxHP;
         }        
         #endregion
+
+        public void TakeDamage(int damage)
+        {
+            CurrentHP = Mathf.Max(0, CurrentHP - damage);
+            if (IsDead)
+            {
+                Die();
+            }
+            else
+            {
+                animationController.Hit();
+            }
+        }
+
+        public void Die()
+        {
+            Logger.Log("사망");
+            animationController.Die();
+        }
     }
 }
