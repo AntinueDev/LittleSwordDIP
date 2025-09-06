@@ -1,0 +1,23 @@
+using UnityEngine;
+using Logger = LittleSword.Common.Logger;
+
+namespace LittleSword.Enemy.FSM
+{
+    public class IdleState : IState
+    {
+        public void Enter(Enemy enemy)
+        {
+            Logger.Log("Idle 진입");
+        }
+
+        public void Update(Enemy enemy)
+        {
+            Logger.Log("Idle 갱신");
+        }
+
+        public void Exit(Enemy enemy)
+        {
+            Logger.Log("Idle 종료");
+        }
+    }
+}
