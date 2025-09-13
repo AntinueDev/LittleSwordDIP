@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - NPC
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 85dc454c28419498a97976f9c7ffb139
+    m_Address: Warrior
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - NPC
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e0169ec95a5fc472aad64e84a0b9955d, type: 2}
   m_SchemaSet:

@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7322ffb9-52a6-4779-980d-77e7936ca678" name="Changes" comment="함">
+    <list default="true" id="7322ffb9-52a6-4779-980d-77e7936ca678" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LittleSwordDIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LittleSwordDIP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01_Scenes/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Scenes/Level01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Scripts/Enemy/FSM/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scripts/Enemy/FSM/AttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Scripts/Enemy/FSM/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scripts/Enemy/FSM/ChaseState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Scripts/Enemy/FSM/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scripts/Enemy/FSM/IdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Scripts/Enemy/Stats/EnemyStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scripts/Enemy/Stats/EnemyStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/06_Animations/Goblin/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06_Animations/Goblin/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02_Scripts/Manager/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scripts/Manager/SpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +45,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Enemy/FSM/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Enemy/FSM/IdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Enemy/Stats/EnemyStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Manager/AddressableManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Manager/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Player/BasePlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Player/Warrior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/jaehyun/Desktop/LittleSwordDIP/Assets/06_Animations/Goblin/Attack.anim" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/06_Animations/Goblin/Attack.anim" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetGroupSortSettings.asset" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -150,7 +148,7 @@
       <updated>1757560290405</updated>
       <workItem from="1757560292686" duration="11565000" />
       <workItem from="1757723521782" duration="4307000" />
-      <workItem from="1757729231574" duration="3200000" />
+      <workItem from="1757729231574" duration="7730000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 비동기 에셋 로딩">
       <option name="closed" value="true" />
@@ -184,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757640329621</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: Implement enemy spawning and state management">
+      <option name="closed" value="true" />
+      <created>1757732464337</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757732464337</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +254,8 @@
     <MESSAGE value="feat: Addressable 캐시 및 릴리즈처리" />
     <MESSAGE value="feat: ScriptableObject 아이템 생성 및 아이템 효과 기능 추가" />
     <MESSAGE value="feat: GameEvent 로직 완성&#10;- UI Manager 생성해서 EventListener 추가함" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: GameEvent 로직 완성&#10;- UI Manager 생성해서 EventListener 추가함" />
+    <MESSAGE value="feat: Implement enemy spawning and state management" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Implement enemy spawning and state management" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
