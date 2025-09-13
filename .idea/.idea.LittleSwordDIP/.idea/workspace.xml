@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7322ffb9-52a6-4779-980d-77e7936ca678" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/02_Scripts/EventBus/GameEventListener.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/02_Scripts/EventBus/GameEventListener.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/02_Scripts/Items/ItemEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/02_Scripts/Items/ItemEffect.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LittleSwordDIP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LittleSwordDIP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Scripts/Manager/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scripts/Manager/SpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01_Scenes/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Scenes/Level01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02_Scripts/Editor/BasePlayerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scripts/Editor/BasePlayerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02_Scripts/Player/BasePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scripts/Player/BasePlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Prefabs/Warrior.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Prefabs/Warrior.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +54,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Enemy/FSM/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Enemy/FSM/IdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Enemy/Stats/EnemyStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/EventBus/GameEventListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Items/Effect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Manager/AddressableManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Manager/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/02_Scripts/Player/BasePlayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,6 +64,8 @@
     <setting file="mock:///Users/jaehyun/Desktop/LittleSwordDIP/Assets/06_Animations/Goblin/Attack.anim" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/06_Animations/Goblin/Attack.anim" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetGroupSortSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/jaehyun/Desktop/LittleSwordDIP/Assets/AddressableAssetsData/AddressableAssetSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -148,7 +162,7 @@
       <updated>1757560290405</updated>
       <workItem from="1757560292686" duration="11565000" />
       <workItem from="1757723521782" duration="4307000" />
-      <workItem from="1757729231574" duration="7730000" />
+      <workItem from="1757729231574" duration="14777000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 비동기 에셋 로딩">
       <option name="closed" value="true" />
@@ -190,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757732464337</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: Implement asynchronous asset loading for enemies and players">
+      <option name="closed" value="true" />
+      <created>1757739129629</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1757739129629</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +277,8 @@
     <MESSAGE value="feat: ScriptableObject 아이템 생성 및 아이템 효과 기능 추가" />
     <MESSAGE value="feat: GameEvent 로직 완성&#10;- UI Manager 생성해서 EventListener 추가함" />
     <MESSAGE value="feat: Implement enemy spawning and state management" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Implement enemy spawning and state management" />
+    <MESSAGE value="feat: Implement asynchronous asset loading for enemies and players" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Implement asynchronous asset loading for enemies and players" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -272,6 +295,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/02_Scripts/Manager/SpawnManager.cs</url>
+          <line>15</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/02_Scripts/Manager/SpawnManager.cs" containingFunctionPresentation="Method 'SpawnEnemy'">
+            <startOffsets>
+              <option value="413" />
+            </startOffsets>
+            <endOffsets>
+              <option value="414" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

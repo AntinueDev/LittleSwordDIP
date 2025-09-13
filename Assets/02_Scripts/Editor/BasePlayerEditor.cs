@@ -22,6 +22,11 @@ public class BasePlayerEditor : Editor
             basePlayer.TakeDamage(10);
         }
 
+        if (GUILayout.Button("물약"))
+        {
+            basePlayer.items[0].UseItem(basePlayer.gameObject);
+        }
+        
         if (GUILayout.Button("초기화"))
         {
             basePlayer.CurrentHP = basePlayer.playerStats.maxHP;

@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -142,6 +142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LittleSword.Player.Warrior
   playerStats: {fileID: 11400000, guid: f883c95a8ac394e0daa4d882b2150b70, type: 2}
+  items:
+  - {fileID: 11400000, guid: b32a6e3577c104703affd85ebd779935, type: 2}
+  onAttackEvent: {fileID: 11400000, guid: bcffd2a2aca6240da8df6b81449290d3, type: 2}
+  onDeathEvent: {fileID: 11400000, guid: 3dd3b0f5f2f0e42f8929f68b833baffc, type: 2}
 --- !u!50 &729653935562991056
 Rigidbody2D:
   serializedVersion: 5

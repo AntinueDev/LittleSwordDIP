@@ -27,7 +27,13 @@ namespace LittleSword.Player
         // 프로퍼티
         public bool IsDead => CurrentHP <= 0;
         public int CurrentHP { get; set; }
+        
+        // 보유 아이템
+        public Item[] items;
 
+        // 이벤트 채널 연결
+        [SerializeField] private GameEvent onAttackEvent;
+        [SerializeField] private GameEvent onDeathEvent;
         
         #region 유니티 이벤트
         protected void Awake()
@@ -90,6 +96,7 @@ namespace LittleSword.Player
 
         public void TakeDamage(int damage)
         {
+            onAttackEvent?.Raise();
             CurrentHP = Mathf.Max(0, CurrentHP - damage);
             if (IsDead)
             {
@@ -103,6 +110,8 @@ namespace LittleSword.Player
 
         public void Die()
         {
+            onDeathEvent?.Raise();
+            
             Logger.Log("사망");
             animationController.Die();
 
