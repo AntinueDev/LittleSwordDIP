@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using LittleSword.Enemy.FSM;
+using LittleSword.Interface;
+using LittleSword.Player;
 
 namespace LittleSword.Enemy
 {
@@ -15,7 +17,7 @@ namespace LittleSword.Enemy
         [SerializeField] private EnemyStats enemyStats;
 
         // 추적 대상
-        [SerializeField] private Transform target;
+        public Transform target;
         [SerializeField] private LayerMask playerLayer;
 
         // 상태 머신
@@ -27,6 +29,7 @@ namespace LittleSword.Enemy
         // 컴포넌트 캐싱
         private Rigidbody2D rb;
         private SpriteRenderer spriteRenderer;
+        public Animator animator;
 
         public void ChangeState<T>() where T : IState
         {
@@ -44,6 +47,7 @@ namespace LittleSword.Enemy
             if (colliders.Length > 0)
             {
                 target = colliders
+                    .Where(c => c.GetComponent<BasePlayer>().IsDead == false)
                     .OrderBy(c => (transform.position - c.transform.position).sqrMagnitude)
                     .First()
                     .transform;
@@ -77,6 +81,16 @@ namespace LittleSword.Enemy
             return distance <= enemyStats.attackRange * enemyStats.attackRange;
         }
 
+        #region 애니메이션 이벤트
+        // 공격 애니메이션에서 호출할 이벤트
+        public void OnEnemyAttackEvent()
+        {
+            if (target == null) return;
+            target.GetComponent<IDamageable>().TakeDamage(enemyStats.attackDamage);
+        }
+
+        #endregion
+        
         #region 유니티 이벤트
 
         private void Awake()
@@ -86,7 +100,7 @@ namespace LittleSword.Enemy
                 // Indexer 방식
                 [typeof(IdleState)] = new IdleState(enemyStats.detectInterval),
                 [typeof(ChaseState)] = new ChaseState(enemyStats.detectInterval),
-                [typeof(AttackState)] = new AttackState(),
+                [typeof(AttackState)] = new AttackState(enemyStats.attackCooldown),
             };
         }
 
@@ -94,6 +108,7 @@ namespace LittleSword.Enemy
         {
             rb = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
+            animator = GetComponent<Animator>();
             
             stateMachine = new StateMachine(this);
             // 초기 상태 설정(IdleState)

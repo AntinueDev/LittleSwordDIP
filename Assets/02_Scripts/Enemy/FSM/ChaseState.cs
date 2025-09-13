@@ -16,7 +16,7 @@ namespace LittleSword.Enemy.FSM
 
         public void Enter(Enemy enemy)
         {
-            Logger.Log("Chase 진입");
+            enemy.animator.SetBool(Enemy.hashIsRun, true);
         }
 
         public void Update(Enemy enemy)

@@ -8,7 +8,7 @@ public class EnemyStats : ScriptableObject
     public float moveSpeed = 2f;
     public float chaseRange = 5f;
     public float attackRange = 1.5f;
-    public float attackDamage = 10f;
+    public int attackDamage = 10;
     public float attackCooldown = 1f;
     public float detectInterval = 0.3f;
 }

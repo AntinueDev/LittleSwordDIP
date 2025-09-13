@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Default Local Group
+  m_GUID: 2dfea0dc0ee514e12b9fc5254d25e1b8
+  m_SerializeEntries:
+  - m_GUID: 8366d2791b61a452bbeae31961772ec1
+    m_Address: Goblin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - NPC
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e0169ec95a5fc472aad64e84a0b9955d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 573b6929543e74b618591acb8b2dd68a, type: 2}
+    - {fileID: 11400000, guid: b2620f74918aa49eeab319d1b073438c, type: 2}
